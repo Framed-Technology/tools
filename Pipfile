@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[scripts]
+dev = 'python index.py'
+fmt = 'black .'
+auth = 'gcloud auth application-default login' 
+deploy = 'gcloud run deploy tools --source . --region us-central1'
+
+[packages]
+fastapi = "*"
+uvicorn = "*"
+python-dotenv = "*"
+pandas = "*"
+yfinance = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
